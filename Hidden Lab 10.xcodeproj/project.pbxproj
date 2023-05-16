@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F0F4E2A22A141A1B00A52714 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0F4E2A12A141A1B00A52714 /* main.cpp */; };
+		F0F4E2AA2A141FEC00A52714 /* Direct_Uneighted_Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0F4E2A92A141FEB00A52714 /* Direct_Uneighted_Graph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		F0F4E29E2A141A1B00A52714 /* Hidden Lab 10 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Hidden Lab 10"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F4E2A12A141A1B00A52714 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F0F4E2A82A141F8D00A52714 /* DirectedUnweightedGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectedUnweightedGraph.h; sourceTree = "<group>"; };
+		F0F4E2A92A141FEB00A52714 /* Direct_Uneighted_Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Direct_Uneighted_Graph.cpp; sourceTree = "<group>"; };
+		F0F4E2AC2A1428F800A52714 /* Board.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Board.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				F0F4E2A12A141A1B00A52714 /* main.cpp */,
+				F0F4E2A82A141F8D00A52714 /* DirectedUnweightedGraph.h */,
+				F0F4E2A92A141FEB00A52714 /* Direct_Uneighted_Graph.cpp */,
+				F0F4E2AC2A1428F800A52714 /* Board.txt */,
 			);
 			path = "Hidden Lab 10";
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F4E2A22A141A1B00A52714 /* main.cpp in Sources */,
+				F0F4E2AA2A141FEC00A52714 /* Direct_Uneighted_Graph.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
