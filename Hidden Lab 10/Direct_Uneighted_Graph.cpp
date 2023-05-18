@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "DirectedUnweightedGraph.h"
 
+
 DirectedUnweightedGraph::DirectedUnweightedGraph(int count)
 {
     numberOfVertices = count;
@@ -19,20 +20,66 @@ void DirectedUnweightedGraph::addEdge(Edge edge)
     adjacencyList[edge.source].push_back(edge.destination);
 }
 
-void DirectedUnweightedGraph::BFS()
-{
-    
-}
-
 void DirectedUnweightedGraph::printGraph()
 {
-    for(int i=0; i < numberOfVertices; i++)
+    for (int i = 0; i < numberOfVertices; i++)
     {
-        cout<< i <<": ";
-        for(int j = 0; j<adjacencyList.size(); j++)
+        cout << i << " -> ";
+        for (int x : adjacencyList[i])
         {
-            cout<< adjacencyList[i][j]<<"   ";
+            cout << x << " -> ";
         }
-        cout<< endl;
+        cout << endl;
+    }
+}
+
+void DirectedUnweightedGraph::DFSRec(int vertex, vector<bool>& visited)
+{
+    visited[vertex] = true;
+    cout << vertex << " ";
+
+    for (int neighbor : adjacencyList[vertex])
+    {
+        if (!visited[neighbor])
+        {
+            DFSRec(neighbor, visited);
+        }
+    }
+}
+
+void DirectedUnweightedGraph::DFS()
+{
+    vector<bool> visited(numberOfVertices, false);
+    for (int i = 0; i < numberOfVertices; i++)
+    {
+        if (!visited[i])
+        {
+            DFSRec(i, visited);
+        }
+    }
+}
+
+void DirectedUnweightedGraph::BFS()
+{
+    vector<bool> visited(numberOfVertices, false);
+    queue<int> q;
+
+    visited[0] = true;
+    q.push(0);
+
+    while (!q.empty())
+    {
+        int vertex = q.front();
+        q.pop();
+        cout << vertex << " ";
+
+        for (int neighbor : adjacencyList[vertex])
+        {
+            if (!visited[neighbor])
+            {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
+        }
     }
 }
