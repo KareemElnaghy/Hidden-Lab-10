@@ -13,7 +13,7 @@ int main()
     int numberOfVertices = 0;
     int value;
 
-    // Count the number of vertices
+    // Count the number of vertices + create a 2D vector
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -28,19 +28,7 @@ int main()
     }
     
     iFile.close();
-//    cout<<endl;
-//
-//    for(int i = 0; i<10; i++)
-//    {
-//        for(int j = 0; j<10; j++)
-//        {
-//            cout<<board[i][j]<<"   ";
-//        }
-//        cout<<endl;
-//    }
-//
-//
-//    cout<<endl;
+    
     DirectedUnweightedGraph graph(numberOfVertices);
 
    
@@ -61,7 +49,7 @@ int main()
                     
                         
                     }
-                   //check left
+                   //check left neighbor
                     
                     if (board[i][j-1] != -1)
                     {
@@ -69,7 +57,7 @@ int main()
                         
                     }
                     
-                    //check top
+                    //check top neighbor
                     if (board[i-1][j] != -1)
                     {
                             graph.addEdge({currentVertex, board[i-1][j]});
@@ -86,8 +74,6 @@ int main()
                     currentVertex++;
                 }
              
-
-            
         }
     }
    
@@ -98,5 +84,7 @@ int main()
     cout<<endl<<"BFS: ";
     graph.BFS();
 
+    cout<<endl<<"DFS: ";
+    graph.DFS();
     return 0;
 }

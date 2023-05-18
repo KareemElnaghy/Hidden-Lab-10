@@ -29,6 +29,7 @@
 		F0F4E2A82A141F8D00A52714 /* DirectedUnweightedGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectedUnweightedGraph.h; sourceTree = "<group>"; };
 		F0F4E2A92A141FEB00A52714 /* Direct_Uneighted_Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Direct_Uneighted_Graph.cpp; sourceTree = "<group>"; };
 		F0F4E2AC2A1428F800A52714 /* Board.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Board.txt; sourceTree = "<group>"; };
+		F0F4E2AD2A16DBBA00A52714 /* Output.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Output.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				F0F4E2A82A141F8D00A52714 /* DirectedUnweightedGraph.h */,
 				F0F4E2A92A141FEB00A52714 /* Direct_Uneighted_Graph.cpp */,
 				F0F4E2AC2A1428F800A52714 /* Board.txt */,
+				F0F4E2AD2A16DBBA00A52714 /* Output.md */,
 			);
 			path = "Hidden Lab 10";
 			sourceTree = "<group>";

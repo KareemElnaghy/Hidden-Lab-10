@@ -35,14 +35,14 @@ void DirectedUnweightedGraph::printGraph()
 
 void DirectedUnweightedGraph::DFSRec(int vertex, vector<bool>& visited)
 {
-    visited[vertex] = true;
+    visited[vertex] = true; //mark current vertex as visted
     cout << vertex << " ";
 
-    for (int neighbor : adjacencyList[vertex])
+    for (int x : adjacencyList[vertex]) //recur for neighboring vertices
     {
-        if (!visited[neighbor])
+        if (!visited[x])
         {
-            DFSRec(neighbor, visited);
+            DFSRec(x, visited);
         }
     }
 }
@@ -73,12 +73,12 @@ void DirectedUnweightedGraph::BFS()
         q.pop();
         cout << vertex << " ";
 
-        for (int neighbor : adjacencyList[vertex])
+        for (int x : adjacencyList[vertex])
         {
-            if (!visited[neighbor])
+            if (!visited[x])
             {
-                visited[neighbor] = true;
-                q.push(neighbor);
+                visited[x] = true;
+                q.push(x);
             }
         }
     }
