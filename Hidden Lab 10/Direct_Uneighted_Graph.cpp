@@ -82,4 +82,10 @@ void DirectedUnweightedGraph::BFS()
             }
         }
     }
+    
+    while(!q.empty()){
+            cout<<" "<<q.front();
+            q.pop();
+        }
+    
 }

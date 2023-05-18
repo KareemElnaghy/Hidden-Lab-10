@@ -95,7 +95,8 @@ int main()
     cout << "Graph: " << endl;
     graph.printGraph();
     
-//    cout<<endl<<"BFS: "<<graph.BFS()<<endl;
+    cout<<endl<<"BFS: ";
+    graph.BFS();
 
     return 0;
 }
